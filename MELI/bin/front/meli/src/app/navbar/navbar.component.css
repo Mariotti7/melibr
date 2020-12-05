@@ -1,0 +1,33 @@
+.letra{
+    font-size: 14px;
+}
+
+.warning{
+ background: #FFF159;
+}
+
+.text-input{
+    width:600px
+  }
+
+  .position{
+      position: relative;
+      right: 600px;
+  }
+
+  .posi{
+    position: relative;
+    right: 300px;
+  }
+
+  .posis{
+    position: relative;
+    right: 400px;
+    bottom: 5px;
+  }
+
+  .pos{
+    display: inline-block;
+    margin: 0;
+    position: relative;
+  }

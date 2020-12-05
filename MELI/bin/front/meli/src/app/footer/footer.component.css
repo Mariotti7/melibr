@@ -1,0 +1,18 @@
+.center{
+ 
+    position: relative;
+}
+
+.warning{
+    background: #FFF159;
+}
+
+.warning:hover, .warning:focus{
+    transition: all 0.3s ease-in-out 0s;
+    background: #fde90a;
+    transform: translateY(-6px);
+}
+
+.txt{
+    color: #4B4B4B;
+}
