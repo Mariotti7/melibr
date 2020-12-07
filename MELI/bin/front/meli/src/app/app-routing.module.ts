@@ -5,6 +5,7 @@ import { EnvioComponent } from './envio/envio.component';
 import { HomeComponent } from './home/home.component';
 import { PedidoComponent } from './pedido/pedido.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
