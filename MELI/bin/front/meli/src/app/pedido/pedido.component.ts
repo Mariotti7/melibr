@@ -16,7 +16,7 @@ export class PedidoComponent implements OnInit {
 
   categoria = new Categoria()
   listaCategoria: Categoria[]
-  idCategoria: number
+
 
   constructor(
     private produtoService: ProdutoService,
@@ -30,7 +30,7 @@ export class PedidoComponent implements OnInit {
   }
 
   enviar(){
-    this.categoria.id = this.idCategoria
+
     this.produto.categoria = this.categoria
 
     if(this.produto.nome == null || this.produto.estadoProduto == null || this.produto.tipoAvaria == null){
@@ -57,10 +57,5 @@ export class PedidoComponent implements OnInit {
     })
   }
 
-  findByIdCategoria(){
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
-      this.categoria = resp
-    })
-  }
 
 }

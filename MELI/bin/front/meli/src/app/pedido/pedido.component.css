@@ -1,16 +1,15 @@
 .button {
-    min-width: 200px;
+    min-width: 150px;
     min-height: 10px;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
-    color: #313133;
+    color: #ffffff;
     background: #1259C3;
   background: linear-gradient(90deg, #3174d8 0%, #2375f0 100%);
     border: none;
-    border-radius: 1000px;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
