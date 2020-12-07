@@ -1,36 +1,40 @@
 <hr>
-<div class="container d-flex justify-content-center"><h1>Enviar Pedido</h1></div>
+<div class="container d-flex justify-content-center"><h1>Preparar Pedido</h1></div>
 <hr>
-<div class="container d-flex justify-content-center">
-    <form method="post" action="envio_dados">
-        <label for="nome" class="mt-3" style="
-        height: 8px;"><h5>Nome do Produto</h5> </label>
-        <br>
-        <input type="text" class="text-input" name="nome" placeholder="Nome do produto" [(ngModel)]='produto.nome'>
-        <br>
-        <label for="estadoProduto" class="mt-2" style="
-        height: 8px;"><h5>Estado do Produto</h5></label>
-        <br>
-        <input type="text" class="text-input" name="estadoProduto" placeholder="Novo ou Usado" [(ngModel)]='produto.estadoProduto'>
-        <br>
-        <label for="avariaProduto" class="mt-2" style="
-        height: 8px;"><h5>Tipo de Avaria</h5></label>
-        <br>
-        <input type="text" class="text-input" name="avariaProduto" placeholder="Informe se há avarias" [(ngModel)]='produto.tipoAvaria'>
-        <br>
-        <label for="categoria" class="mt-2" style="
-        height: 8px;"><h5>Categoria do Produto</h5></label>
-        <br>
-       <input type="text" class="text-input" name="categoria" placeholder="Informe a categoria" [(ngModel)]='produto.categoria'>
-        <br>
-        <button class="button mt-3" name="enviar" type="submit" (click)='enviar()'>ENVIAR</button>
-     
-    </form>
-</div>
+<div class="row mb-5 d-flex justify-content-center">
+    <div class="col-md-8">
+        <div>
+            <div class="form-group">
+                <label for="nome"><h5>Nome do produto</h5></label>
+                <input type="text" class="form-control" id="nome"
+                placeholder="Digite o nome do produto" [(ngModel)]='produto.nome'>
+            </div>
+            <div class="form-group">
+                <label for="estadoProduto"><h5>Estado do produto</h5></label>
+                <input type="text" class="form-control" id="estadoProduto"
+                name="estadoProduto" placeholder="Digite se é Novo ou Usado" [(ngModel)]='produto.estadoProduto'>
+            </div>
+            <div class="form-group">
+                <label for="tipoAvaria"><h5>Avarias</h5></label>
+                <input type="text" class="form-control" id="tipoAvaria"
+                name="tipoAvaria" placeholder="Informe o tipo de avaria" [(ngModel)]='produto.tipoAvaria'>
+            </div>
+            <div class="form-group">
+                <label for="categoria"><h5>Categoria</h5></label>
+                <input type="text" class="form-control" id="categoria" name="categoria"
+                placeholder="Informe a categoria do produto" [(ngModel)]='produto.categoria'>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button class="button mt-3" name="enviar" type="submit" (click)='enviar()'>ENVIAR</button>
+
+            </div>
+            </div>
+            </div>
+            </div>
 <hr>
 
 <hr>
-<h4>Lista de Pedidos</h4>
+<h4>Lista de Pedidos Enviados</h4>
 <div class="row">
     <div class="col-md-12">
       <div class="card mt-5 mb-5" *ngFor="let item of listaProduto">
