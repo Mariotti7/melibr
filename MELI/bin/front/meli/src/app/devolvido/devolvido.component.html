@@ -7,41 +7,41 @@
     <div class="col-md-8">
         <div>
             <div class="form-group">
-                <label for="nome" ><h5>Produto devolvido</h5></label>
+                <label for="nome"><h5>Produto devolvido</h5></label>
                 <input type="text" class="form-control" id="nome"
-                placeholder="Digite o nome do produto">
+                placeholder="Digite o nome do produto" [(ngModel)]='prodDev.nomeProdutoDevolucao'>
             </div>
             <div class="form-group">
-                <label for="categoria" ><h5>Categoria</h5></label>
+                <label for="categoria"><h5>Categoria</h5></label>
                 <br>
-                <select name="categoria" id="categoria">
-                    <option value=""> </option>
-                    <option value="Brinquedo">Brinquedo</option>
+                <select name="categoria" id="categoria" (change)='findByIdCategoria()'>
+                    <option *ngFor='let item of listaCategoria' value="{{item.id}}">{{item.descricao}}</option>
+                    <!--<option value="Brinquedo">Brinquedo</option>
                     <option value="Eletrônico">Eletrônico</option>
                     <option value="Informatica">Informatica</option>
-                    <option value="Vestuário">Vestuário</option>
+                    <option value="Vestuário">Vestuário</option>-->
                 </select>
             </div>
             <div class="form-group">
-                <label for="marca" ><h5>Marca</h5></label>
+                <label for="marca"><h5>Marca</h5></label>
                 <br>
-               <select name="marca" id="marca">
-                   <option value=""> </option>
-                   <option value="Apple">Apple</option>
+               <select name="marca" id="marca" (change)='findByIdMarca()'>
+                   <option *ngFor='let item of listaMarca' value="{{item.idMarca}}">{{item.nomeMarca}}</option>
+                  <!--<option value="Apple">Apple</option>
                    <option value="Samsung">Samsung</option>
                    <option value="Motorola">Motorola</option>
                    <option value="Nike">Nike</option>
-                   <option value="Hot Wheels">Hot Wheels</option>
+                   <option value="Hot Wheels">Hot Wheels</option>-->
                </select>
             </div>
             <div class="form-group">
                 <label for="motivo"><h5>Motivo da devolução</h5></label>
                 <br>
-               <select name="motivo" id="motivo">
-                   <option value=""> </option>
-                   <option value="desistencia">Desistência</option>
+               <select name="motivo" id="motivo" (change)='findByIdMotivo()'>
+                   <option *ngFor='let item of listaMotivo' value="{{item.idMotivoDevolucao}}">{{item.descricaoMotivoDevolucao}}</option>
+                   <!--<option value="desistencia">Desistência</option>
                    <option value="naoEntrega">Não entregue</option>
-                   <option value="troca">Troca</option>
+                   <option value="troca">Troca</option>-->
                </select>
                
 
@@ -59,13 +59,12 @@
 <h4>Lista de Pedidos Devolvidos</h4>
 <div class="row">
     <div class="col-md-12">
-      <div class="card mt-5 mb-5">
+      <div class="card mt-5 mb-5" *ngFor='let item of listaProdDev'>
         <div class="card-header">
-            <div class="row d-flex align-items-center">
+            <div class="row d-flex align-items-center" >
                 <div class="col-md-8">
-                    <h5 class="card-title">Nome do Produto: {{nome}}</h5>
-                    <h6 class="card">Motivo: {{motivo}}</h6>
-                    <small>Código Devolução: {{codDev}}</small>
+                    <h5 class="card-title">Nome do Produto: {{item.nomeProdutoDevolucao}}</h5>
+                    <small>Código Devolução: {{item.codigoDevolucao}}</small>
                 </div>
                 <div class="col-md-4 d-flex justify-content-end">
 

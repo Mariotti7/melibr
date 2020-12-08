@@ -6,4 +6,5 @@ export class Produto{
     public estadoProduto: string
     public tipoAvaria: string
     public categoria: Categoria
+    public numeroPedido: String
 }

@@ -6,5 +6,5 @@ export class Categoria{
     public descricao: string
     public produto: Produto[]
     public siglaCategoria: string
-    public produtoDevolucao: ProdutoDevolucao[]
+    public prodDevolucao: ProdutoDevolucao[]
 }
