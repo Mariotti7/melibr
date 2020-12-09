@@ -16,8 +16,7 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./devolvido.component.css'],
 })
 export class DevolvidoComponent implements OnInit {
-  /*nome: string
-  motivo: string*/
+
   codDev: string = 'D3V' + Math.floor(Math.random() * 1999 + 1);
 
   produto = new Produto();
@@ -54,10 +53,6 @@ export class DevolvidoComponent implements OnInit {
     this.findAllMarca();
     this.findAllMotivo();
     this.findAllProdDev();
-    // this.findAllProdutos()
-    // this.findByIdCategoria()
-    // this.findByIdMarca()
-    // this.findByIdMotivo()
   }
 
   findAllProdutos() {
@@ -138,10 +133,5 @@ export class DevolvidoComponent implements OnInit {
           alert('Devolução registrada com sucesso!');
         });
     }
-
-    /* alert('produto registrado')
-    this.nome = 'iPhone'
-    this.motivo = 'Não entregue'
-    this.codigo()*/
   }
 }
